@@ -1,4 +1,4 @@
-package com.panjikrisnayasa.simpletodolist
+package com.panjikrisnayasa.simpletodolist.model
 
 data class ToDoList (
     var id: Int? = null,

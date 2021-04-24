@@ -1,10 +1,12 @@
-package com.panjikrisnayasa.simpletodolist
+package com.panjikrisnayasa.simpletodolist.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.panjikrisnayasa.simpletodolist.R
+import com.panjikrisnayasa.simpletodolist.util.SharedPrefManager
 
 class InputNameActivity : AppCompatActivity() {
 

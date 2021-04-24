@@ -1,9 +1,9 @@
-package com.panjikrisnayasa.simpletodolist
+package com.panjikrisnayasa.simpletodolist.util
 
 import android.content.Context
 import android.content.SharedPreferences
 
-class SharedPrefManager(private val mContext: Context?) {
+class SharedPrefManager(mContext: Context?) {
 
     private val sharedPrefName = "simpleToDoListSharedPref"
     private val keyIsNameInputted = "isInputtedName"
@@ -27,6 +27,7 @@ class SharedPrefManager(private val mContext: Context?) {
 
     fun setName(name: String) {
         val editor = mSharedPref?.edit()
+        editor?.putBoolean(keyIsNameInputted, true)
         editor?.putString(keyName, name)
         editor?.apply()
     }

@@ -1,7 +1,8 @@
-package com.panjikrisnayasa.simpletodolist
+package com.panjikrisnayasa.simpletodolist.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.panjikrisnayasa.simpletodolist.R
 
 class CreateToDoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

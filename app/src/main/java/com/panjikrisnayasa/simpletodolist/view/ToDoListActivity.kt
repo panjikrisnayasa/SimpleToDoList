@@ -1,4 +1,4 @@
-package com.panjikrisnayasa.simpletodolist
+package com.panjikrisnayasa.simpletodolist.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,9 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.panjikrisnayasa.simpletodolist.R
+import com.panjikrisnayasa.simpletodolist.adapter.ToDoListAdapter
+import com.panjikrisnayasa.simpletodolist.util.SharedPrefManager
 
 class ToDoListActivity : AppCompatActivity() {
 
