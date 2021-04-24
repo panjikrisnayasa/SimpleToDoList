@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleToDoList">
         <activity
-            android:name=".ToDoListActivity"
+            android:name=".CreateToDoActivity"
+            android:label="@string/create_to_do_toolbar_title"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,10 +21,13 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ToDoListActivity"
+            android:label="@string/to_do_list_toolbar_title"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".InputNameActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>
 
 </manifest>

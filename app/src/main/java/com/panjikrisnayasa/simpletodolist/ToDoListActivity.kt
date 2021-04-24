@@ -9,10 +9,6 @@ class ToDoListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_to_do_list)
-
-        supportActionBar?.title = getString(R.string.to_do_list_toolbar_title)
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
