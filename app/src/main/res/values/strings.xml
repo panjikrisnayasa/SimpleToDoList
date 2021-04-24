@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SimpleToDoList</string>
+    <string name="input_text_name">Name</string>
+    <string name="input_button_next">Next</string>
+    <string name="input_edit_name">Input your name here</string>
+</resources>
