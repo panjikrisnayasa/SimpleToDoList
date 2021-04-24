@@ -35,6 +35,8 @@
             android:layout_marginTop="8dp"
             android:background="@android:color/white"
             android:hint="@string/input_edit_name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
             android:padding="8dp"
             android:textColor="@android:color/black"
             android:textColorHint="@color/text_grey"
@@ -48,7 +50,6 @@
             android:layout_marginTop="16dp"
             android:backgroundTint="@color/color_primary_dark"
             android:text="@string/input_button_next"
-            android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/edit_input_name" />
 

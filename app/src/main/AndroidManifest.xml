@@ -11,14 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleToDoList">
         <activity
-            android:name=".InputNameActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:name=".ToDoListActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".InputNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
     </application>
 

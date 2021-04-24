@@ -1,6 +1,12 @@
 <resources>
-    <string name="app_name">SimpleToDoList</string>
+    <string name="app_name">Simple To Do List</string>
+    <string name="to_do_list_toolbar_title">Hi, </string>
+
     <string name="input_text_name">Name</string>
     <string name="input_button_next">Next</string>
     <string name="input_edit_name">Input your name here</string>
+    <string name="item_text_created_at">Created at: </string>
+    <string name="item_text_created_by">Created by: </string>
+    <string name="item_button_done">This is done</string>
+    <string name="menu_create_to_do">Create To Do</string>
 </resources>
