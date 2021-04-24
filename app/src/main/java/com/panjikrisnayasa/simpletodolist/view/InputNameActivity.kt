@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.panjikrisnayasa.simpletodolist.R
 import com.panjikrisnayasa.simpletodolist.util.SharedPrefManager
@@ -28,8 +29,13 @@ class InputNameActivity : AppCompatActivity() {
         mButtonNext = findViewById(R.id.button_input_next)
         mButtonNext.setOnClickListener {
             val name = mEditName.text.toString().trim()
-            mSharedPref.setName(name)
-            moveToToDoListActivity()
+
+            if (name.isNotBlank()) {
+                mSharedPref.setName(name)
+                moveToToDoListActivity()
+            } else {
+                Toast.makeText(this, "Please input your name first", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

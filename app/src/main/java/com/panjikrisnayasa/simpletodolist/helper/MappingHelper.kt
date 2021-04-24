@@ -19,9 +19,7 @@ object MappingHelper {
                     toDoListCursor.getString(toDoListCursor.getColumnIndexOrThrow(DatabaseContract.ToDoListColumns.DESCRIPTION))
                 val date =
                     toDoListCursor.getString(toDoListCursor.getColumnIndexOrThrow(DatabaseContract.ToDoListColumns.DATE))
-                val image =
-                    toDoListCursor.getString(toDoListCursor.getColumnIndexOrThrow(DatabaseContract.ToDoListColumns.IMAGE))
-                toDoList.add(ToDoList(id, title, description, date, image))
+                toDoList.add(ToDoList(id, title, description, date))
             } while (toDoListCursor.moveToNext())
         }
         return toDoList

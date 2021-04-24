@@ -34,6 +34,11 @@ class ToDoListAdapter : RecyclerView.Adapter<ToDoListAdapter.ToDoListViewHolder>
         return this.listToDo.size
     }
 
+    fun addItem(toDoList: ToDoList) {
+        this.listToDo.add(toDoList)
+        notifyItemInserted(this.listToDo.size - 1)
+    }
+
     inner class ToDoListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(toDoList: ToDoList) {
             val image: CircleImageView = itemView.findViewById(R.id.image_item_to_do)

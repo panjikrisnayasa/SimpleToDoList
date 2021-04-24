@@ -14,8 +14,7 @@ class DatabaseHelper(context: Context) :
                 " (${DatabaseContract.ToDoListColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
                 " ${DatabaseContract.ToDoListColumns.TITLE} TEXT NOT NULL," +
                 " ${DatabaseContract.ToDoListColumns.DESCRIPTION} TEXT NOT NULL," +
-                " ${DatabaseContract.ToDoListColumns.DATE} TEXT NOT NULL)," +
-                " ${DatabaseContract.ToDoListColumns.IMAGE} TEXT NOT NULL)"
+                " ${DatabaseContract.ToDoListColumns.DATE} TEXT NOT NULL)"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
