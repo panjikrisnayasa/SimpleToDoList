@@ -12,12 +12,15 @@ class ToDoListActivity : AppCompatActivity() {
 
     private lateinit var mRecyclerView: RecyclerView
     private lateinit var mAdapter: ToDoListAdapter
+    private lateinit var mSharedPref: SharedPrefManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_to_do_list)
 
-        supportActionBar?.title = String.format("Hi, %s")
+        mSharedPref = SharedPrefManager.getInstance(this)
+
+        supportActionBar?.title = String.format("Hi, %s", mSharedPref.getName())
 
         showRecyclerView()
     }

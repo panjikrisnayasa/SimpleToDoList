@@ -15,4 +15,5 @@
     <string name="create_text_image">File Image</string>
     <string name="create_button_browse">Browse</string>
     <string name="create_button_submit">Submit</string>
+    <string name="to_do_list_text_no_list">There is no To Do List</string>
 </resources>
