@@ -3,6 +3,7 @@ package com.panjikrisnayasa.simpletodolist.view
 import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
@@ -66,16 +67,20 @@ class CreateToDoActivity : AppCompatActivity(), View.OnClickListener {
             R.id.button_create_submit -> {
                 val title = mEditTitle.text.toString().trim()
                 val description = mEditDescription.text.toString().trim()
-                val image = mEditImage.text.toString().trim()
+//                val image = mEditImage.text.toString().trim()
 
                 if (title.isBlank() || description.isBlank()) {
                     Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
                     return
                 }
 
+                Log.d("hyp", "title = $title")
+                toDoList = ToDoList()
                 toDoList?.title = title
                 toDoList?.description = description
-                toDoList?.image = image
+//                toDoList?.image = image
+
+                Log.d("hyp", "toDoList.title = ${toDoList?.title}")
 
                 val intent = Intent()
                 intent.putExtra(EXTRA_TO_DO_LIST, toDoList)
@@ -84,7 +89,7 @@ class CreateToDoActivity : AppCompatActivity(), View.OnClickListener {
                 val values = ContentValues()
                 values.put(DatabaseContract.ToDoListColumns.TITLE, title)
                 values.put(DatabaseContract.ToDoListColumns.DESCRIPTION, description)
-                values.put(DatabaseContract.ToDoListColumns.IMAGE, image)
+//                values.put(DatabaseContract.ToDoListColumns.IMAGE, image)
 
                 toDoList?.date = getCurrentDate()
                 values.put(DatabaseContract.ToDoListColumns.DATE, getCurrentDate())
@@ -102,7 +107,7 @@ class CreateToDoActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun getCurrentDate(): String {
-        val dateFormat = SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.getDefault())
+        val dateFormat = SimpleDateFormat("dd MMMM H a", Locale.getDefault())
         val date = Date()
         return dateFormat.format(date)
     }

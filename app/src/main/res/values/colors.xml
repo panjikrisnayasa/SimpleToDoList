@@ -4,4 +4,5 @@
     <color name="color_primary">#1B5B44</color>
     <color name="color_primary_dark">#20504C</color>
     <color name="text_grey">#BDBDBD</color>
+    <color name="button_grey">#CCCCCC</color>
 </resources>

@@ -2,6 +2,7 @@ package com.panjikrisnayasa.simpletodolist.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -68,15 +69,15 @@ class ToDoListActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
         if (data != null) {
             if (requestCode == CreateToDoActivity.REQUEST_ADD) {
                 if (resultCode == CreateToDoActivity.RESULT_ADD) {
                     val toDoList =
                         data.getParcelableExtra<ToDoList>(CreateToDoActivity.EXTRA_TO_DO_LIST)
-
-                    if (toDoList != null) mAdapter.addItem(toDoList)
-                    mRecyclerView.smoothScrollToPosition(mAdapter.itemCount - 1)
+                    if (toDoList != null) {
+                        mAdapter.addItem(toDoList)
+                        mRecyclerView.smoothScrollToPosition(mAdapter.itemCount - 1)
+                    }
                 }
             }
         }
@@ -86,7 +87,7 @@ class ToDoListActivity : AppCompatActivity() {
         mRecyclerView = findViewById(R.id.recycler_to_do_list)
         mRecyclerView.layoutManager = LinearLayoutManager(this)
         mRecyclerView.setHasFixedSize(true)
-        mAdapter = ToDoListAdapter()
+        mAdapter = ToDoListAdapter(this)
         mRecyclerView.adapter = mAdapter
     }
 
